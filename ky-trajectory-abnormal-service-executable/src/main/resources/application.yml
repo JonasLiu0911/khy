@@ -1,0 +1,36 @@
+server:
+  port: 16010
+
+spring:
+  application:
+    name: ky-trajectory-abnormal-service
+
+  datasource:
+    url: "jdbc:mysql://116.63.183.174:3306/khy?useSSL=false&serverTimezone=UTC"
+    username: root
+    password: "KHY@777!FJ512"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  profiles:
+    active: prod
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+analysis:
+  trajectory-abnormal:
+    scheduler-enabled: true
+    schedule-mode: DAILY
+    daily-cron: "0 30 0 * * ?"
+    window-days: 30

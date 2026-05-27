@@ -1,0 +1,3 @@
+com\fjkhy\abnormal\infrastructure\jdbc\DetectionConfigJdbcRepositoryIntegrationTest.class
+com\fjkhy\abnormal\infrastructure\datasource\KhyAbnormalJdbcIntegrationTest.class
+com\fjkhy\abnormal\infrastructure\jdbc\AbnormalResultJdbcRepositoryIntegrationTest.class

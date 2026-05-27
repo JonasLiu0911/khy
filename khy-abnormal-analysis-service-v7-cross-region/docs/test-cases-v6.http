@@ -1,0 +1,26 @@
+### 查询检测流程
+GET http://localhost:8081/api/detection/flows
+
+### 查询车辆月度流程节点
+GET http://localhost:8081/api/detection/flows/VEHICLE_MONTHLY_COMPLIANCE_FLOW/nodes
+
+### 查询检测器注册表
+GET http://localhost:8081/api/detection/detectors
+
+### 执行车辆月度运行合规异常检测流程
+POST http://localhost:8081/api/anomaly/tasks/run
+Content-Type: application/json
+
+{
+  "flowCode": "VEHICLE_MONTHLY_COMPLIANCE_FLOW",
+  "countyName": "福清市",
+  "period": "2026-04",
+  "objectType": "VEHICLE",
+  "operator": "student"
+}
+
+### 查询车辆异常结果
+GET http://localhost:8081/api/anomaly/list?objectType=VEHICLE
+
+### 查询轨迹证据展示数据
+GET http://localhost:8081/api/anomaly/evidence/track/vehicles/VEHICLE-001?period=2026-04

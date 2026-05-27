@@ -1,0 +1,45 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: khy-abnormal-analysis-service-v7-cross-region
+logging:
+  level:
+    root: INFO
+    com.fjkhy.abnormal: DEBUG
+khy:
+  abnormal:
+    mode: memory-demo
+    note: "V7默认仍可内存演示运行；配置 khy.abnormal.datasource 后可读取算法视图与GPS表执行真实检测。"
+    datasource:
+      url: "jdbc:mysql://116.63.183.174:3306/khy?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false"
+      username: "root"
+      password: "KHY@777!FJ512"
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 2
+        connection-timeout: 30000
+        validation-timeout: 5000
+        idle-timeout: 600000
+        max-lifetime: 1800000
+    jdbc:
+      query-timeout-seconds: 30
+      fetch-size: 1000
+    cross-region:
+      # 当前未接入行政边界 polygon，输出口径为“疑似线路服务范围外运行/跨乡镇跨县辅助提示”。
+      # 当前站点坐标为火星坐标 GCJ-02，车辆轨迹 lng/lat 为 WGS84，算法统一转为 GCJ-02 后计算距离。
+      coordinate-mode: GCJ02
+      station-coordinate-mode: GCJ02
+      gps-raw-coordinate-mode: WGS84
+      max-vehicles-per-run: 200
+      station-radius-m: 500
+      corridor-radius-m: 1000
+      other-station-radius-m: 500
+      min-valid-points: 30
+      gps-gap-threshold-min: 10
+      min-outside-duration-min: 15
+      outside-point-ratio-threshold: 0.60
+      near-unbound-station-count-threshold: 3
+      gps-drift-speed-threshold-kmh: 120
+      event-merge-window-min: 10

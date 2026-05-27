@@ -1,0 +1,63 @@
+{
+  "route_name": "客货邮中心村客货邮服务点TRU",
+  "stations": [],
+  "forward_direction": {
+    "direction": "",
+    "trips": []
+  },
+  "reverse_direction": {
+    "direction": "",
+    "trips": []
+  },
+  "frequency": null,
+  "operation_time": null,
+  "phone": null,
+  "fares": {},
+  "confidence_notes": [
+    "没有稳定识别到站点行，请检查 debug/raw_ocr.json 或使用手动裁剪。"
+  ],
+  "raw_text_lines": [
+    "综",
+    "BE",
+    "YOUR",
+    "以路促发展·为党聚民心",
+    "客货邮中心村客货邮服务点TRU",
+    "快递领取时间",
+    "Heinek客货邮融合线路及走向图09:00-18:",
+    "平",
+    "Heinek推荐使",
+    "Helneke宦溪村鹅鼻村SEL",
+    "Helneke",
+    "Heireke",
+    "Heineke微信支付",
+    "晋安区幼客货邮融合线路客运",
+    "时刻表、票价表",
+    "微信支付客运站至牛项村:6元/人客运站至创新村:10元/人客运站至宦溪村:6元/人客运站至鹅鼻村:10元/人",
+    "客运站至中心村:10元/人",
+    "运输频次:每日五次",
+    "提供服务的快递品牌",
+    "中国邮政CHINAFOSTZIO中通速锁sto中通快递ssoldxo韵达",
+    "24小时J&T极免速递JD福",
+    "2026-018:00-:00监督电话:0591-12305、12328",
+    "15:591",
+    "星期二晴18℃",
+    "福州市晋安区·亭鼓线",
+    "精选蔬菜（白榕创福源精选蔬菜",
+    "今日水印",
+    "经纬度:26.154951°N.119.399726E",
+    "相机真实可验",
+    "防伪TBLEBGXWUD6ENL"
+  ],
+  "debug": {
+    "auto_crop_used": true,
+    "crop_method": "bounding_rect",
+    "rect": [
+      0,
+      669,
+      3024,
+      4032
+    ],
+    "debug_dir": "debug"
+  },
+  "station_times": []
+}
